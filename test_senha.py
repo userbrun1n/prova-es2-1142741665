@@ -32,3 +32,14 @@ def test_senha_vazia_e_rejeitada():
 
     # Assert
     assert resultado is False
+
+
+def test_senha_so_com_espacos_e_rejeitada():
+    # Arrange
+    senha = " " * (MINIMO + 2)
+
+    # Act
+    resultado = senha_valida(senha)
+
+    # Assert
+    assert resultado is False
